@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    table{
+        border: none;
+    }
+    td{
+        font-weight: bold;
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+<form action="" method="get">
+    <table>
+        <tr>
+            <td>Amount <br/><input type="number" name="tien" id="amount" value=""></td>
+            <td>
+                From Currency<br/>
+                <select style="width: 101px" id="sn1">
+                    <option value="1">Việt Nam</option>
+                    <option value="23">USD</option>
+                    <option value="3">Nhân dân tệ</option>
+                </select>
+            </td>
+            <td>
+                To Currency<br/>
+                <select style="width: 101px" id="sn2">
+                    <option value="1">Việt Nam</option>
+                    <option value="23">USD</option>
+                    <option value="3">Nhân dân tệ</option>
+                </select>
+            </td>
+            <td>
+                <br/>
+                <button type="button" style="color: blue" onclick="doitien()">Convert</button>
+            </td>
+        </tr>
+    </table>
+    <p id="result">Result is : </p>
+</form>
+<script>
+    function doitien(){
+        let a = document.getElementById("amount").value;
+        let b = document.getElementById("sn1").value;
+        let c = document.getElementById("sn2").value;
+        let d = (a*b)/c;
+        document.getElementById("result").innerHTML = 'Result is : '+ d;
+    }
+
+</script>
+</body>
+</html>

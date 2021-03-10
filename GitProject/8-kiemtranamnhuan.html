@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LeapYear</title>
+</head>
+<body>
+<script>
+    let year = parseInt(prompt('Nhập năm cần kiểm tra:'));
+    let isLeapYear = false;
+    let isDivisionBy4 = year % 4 == 0;
+    if (isDivisionBy4) {
+        let isDivisionBy100 = year % 100 == 0;
+        if (isDivisionBy100) {
+            let isDivisionBy400 = year % 400 == 0;
+            if (isDivisionBy400) {
+                isLeapYear = true;
+            }
+        } else {
+            isLeapYear = true;
+        }
+    }
+
+    if (isLeapYear) {
+    alert(year + 'Là năm nhuận');
+    } else {
+        alert(year + 'Không là năm nhuận');
+    }
+
+
+    // if (year % 4 == 0) {
+    //     if (year % 100 == 0) {
+    //         if (year % 400 == 0) {
+    //             isLeapYear = true;
+    //         }
+    //     } else {
+    //         isLeapYear = true;
+    //     }
+    // }
+    //
+    // if (isLeapYear) {
+    //     alert(year + " is a leap year");
+    // } else {
+    //     alert(year + " is NOT a leap year");
+    // }
+
+
+    // if (year % 4 == 0) {
+    //     if (year % 100 != 0) {
+    //         alert('Đây là năm nhuận');
+    //     } else if (year % 400 != 0) {
+    //         alert('Đây không là năm nhuận');
+    //     } else {
+    //         alert('Đây là năm nhuận');
+    //     }
+    // } else {
+    //     alert('Đây không là năm nhuận');
+
+</script>
+</body>
+</html>
